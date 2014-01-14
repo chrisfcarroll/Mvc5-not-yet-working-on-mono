@@ -15,10 +15,9 @@ http://www.asp.net/mvc/tutorials/mvc-5/how-to-upgrade-an-aspnet-mvc-4-and-web-ap
 
 Except: I skipped step 2, upgrading to WebApi 2 because this is trying to get MVC working, getting WebApi2 is another issue. So instead I just commented out the WebApi.Config(...) call. We'll come back to that.
 
-#### The changes made to run it on mono are similar to those described at
+#### The changes made to run it on mono are the same as those described at
 
 http://www.cafe-encounter.net/p1510/asp-net-mvc4-net-framework-version-4-5-c-razor-template-for-mono-on-mac-and-linux
-Except that removing EntityFramework now seems unnecessary.
 
 #### That gets you to this project which runs MVC5
 
