@@ -25,7 +25,7 @@ Except:
      
 #### What doesn't yet work on MVC 5
 
-The HtmlHelper : This @Html.ActionLink]("Home", "Index", "Home") errors with the below stack trace:
+The HtmlHelper : This @Html.ActionLink("Home", "Index", "Home") errors with the below stack trace:
 
 ### System.MissingMethodException
 
