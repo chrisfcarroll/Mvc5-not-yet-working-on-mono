@@ -13,12 +13,11 @@ Which I then updated via NuGet (in Visual Studio still), which update
 
 http://www.asp.net/mvc/tutorials/mvc-5/how-to-upgrade-an-aspnet-mvc-4-and-web-api-project-to-aspnet-mvc-5-and-web-api-2
 
-Except: I skipped step 2, upgrading to WebApi 2 because this is trying to get MVC working, getting WebApi2 is another issue.
+Except: I skipped step 2, upgrading to WebApi 2 because this is trying to get MVC working, getting WebApi2 is another issue. So instead I just commented out the WebApi.Config(...) call. We'll come back to that.
 
-#### The changes made to run it on mono are similar to those described at
+#### The changes made to run it on mono are the same as those described at
 
 http://www.cafe-encounter.net/p1510/asp-net-mvc4-net-framework-version-4-5-c-razor-template-for-mono-on-mac-and-linux
-Except that removing EntityFramework now seems unnecessary.
 
 #### That gets you to this project which runs MVC5
 
@@ -26,11 +25,13 @@ Except:
      
 #### What doesn't yet work on MVC 5
 
-The HtmlHelper : This @Html.ActionLink]("Home", "Index", "Home") errors with this stack trace:
+The HtmlHelper : This @Html.ActionLink]("Home", "Index", "Home") errors with the below stack trace:
 
 ### System.MissingMethodException
 
 Method not found: 'System.Web.Routing.RouteCollection.get_AppendTrailingSlash'.
+
+The property AppendTrailingSlash (http://msdn.microsoft.com/en-us/library/system.web.routing.routecollection.appendtrailingslash(v=vs.110).aspx) appears to be new in.Net 4.5 System.Web.dll so the next step would be adding it to the Mono System.Web.Routing.RouteCollection class.
 
 Description: HTTP 500.Error processing request.
 
