@@ -13,7 +13,7 @@ I've included all the NuGet artifacts and the built dlls.
 
 ### What in MVC 5 doesn't yet work on mono?
 
-####On Mono 3.6:
+####On mono 3.8.1 from github, Aug 2014; and on mono 3.6 and earlier 
 
 All @Html.ActionLink() calls in &#95;Layout.cshtml throw System.MissingMethodException, Method not found: 'System.Web.Routing.RouteCollection.get&#95;AppendTrailingSlash'.
 
